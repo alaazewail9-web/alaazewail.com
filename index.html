@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1224">
+  <meta name="description" content="Alaa Zewail is a media buyer and performance marketer focused on thoughtful strategy, creative testing, and measurable growth.">
+  <title>Alaa Zewail — Media Buyer &amp; Performance Marketer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1224;
+      --surface: #111a30;
+      --text: #f1ead9;
+      --muted: #9aa3b8;
+      --line: #222c45;
+      --gold: #c9a85c;
+      --ink: #0b1224;
+      --serif: "Playfair Display", Georgia, serif;
+      --mono: "Space Mono", monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 Inter, sans-serif;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+    .wrap { width: min(100% - 40px, 920px); margin-inline: auto; }
+    .mono { color: var(--muted); font: 12px/1.5 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+
+    header {
+      position: sticky;
+      z-index: 5;
+      top: env(safe-area-inset-top, 0);
+      background: rgb(11 18 36 / 94%);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { font: 500 25px/1 var(--serif); text-decoration: none; white-space: nowrap; }
+    .logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-links a, .button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 15px;
+      color: var(--muted);
+      font: 11px/1.2 var(--mono);
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: border-color .2s, color .2s, background .2s, transform .2s;
+    }
+    .nav-links a:hover, .button:hover { border-color: var(--gold); color: var(--text); }
+    .nav-links .nav-cta { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .nav-links .nav-cta:hover { background: #d7b96f; color: var(--ink); }
+
+    .hero { padding: 92px 0 64px; text-align: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+    .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); content: ""; }
+    h1, h2, h3 { margin-top: 0; font-family: var(--serif); font-weight: 400; }
+    h1 { max-width: 800px; margin: 22px auto 18px; font-size: 64px; line-height: 1.08; }
+    h1 em, em { color: var(--gold); }
+    .hero-copy { max-width: 620px; margin: 0 auto; color: var(--muted); font-size: 18px; }
+    .hero-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 30px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 13px 20px; color: var(--text); }
+    .button.primary { background: var(--gold); border-color: var(--gold); color: var(--ink); font-weight: 700; }
+    .button.primary:hover { background: #d7b96f; transform: translateY(-2px); }
+
+    .platforms { overflow: hidden; margin: 44px auto 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+    .platform-track { display: flex; width: max-content; animation: drift 26s linear infinite; }
+    .platform-group { display: flex; gap: 10px; padding-right: 10px; }
+    .platform { display: inline-flex; align-items: center; min-height: 38px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+    @keyframes drift { to { transform: translateX(-50%); } }
+
+    .signal { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 62px; border-block: 1px solid var(--line); }
+    .signal-item { padding: 22px 14px; text-align: center; }
+    .signal-item + .signal-item { border-left: 1px solid var(--line); }
+    .signal-title { display: block; color: var(--gold); font: 24px/1.2 var(--serif); }
+    .signal-label { display: block; margin-top: 7px; color: var(--muted); font: 10px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+
+    section { padding: 66px 0; border-top: 1px solid var(--line); }
+    .section-label { color: var(--gold); }
+    h2 { margin: 9px 0 16px; font-size: 42px; line-height: 1.15; }
+    .section-intro { max-width: 620px; margin: 0 0 28px; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card { min-height: 210px; padding: 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .card-index { color: var(--gold); font: 12px var(--mono); }
+    .card h3 { margin: 24px 0 9px; font-size: 25px; line-height: 1.2; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .approach { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: start; }
+    .approach h2 { max-width: 390px; }
+    .steps { border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 19px 0; border-bottom: 1px solid var(--line); }
+    .step-number { color: var(--gold); font: 12px var(--mono); }
+    .step h3 { margin: 0 0 5px; font-size: 21px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .contact { padding: 72px 0; text-align: center; }
+    .contact h2 { max-width: 620px; margin: 12px auto; }
+    .contact p { max-width: 530px; margin: 0 auto 24px; color: var(--muted); }
+    footer { padding: 22px 0 calc(22px + env(safe-area-inset-bottom, 0)); border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 12px; }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 32px, 920px); }
+      .nav { min-height: 68px; }
+      .logo { font-size: 22px; }
+      .nav-links { gap: 6px; }
+      .nav-links a { padding: 9px 10px; font-size: 10px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding: 72px 0 48px; }
+      h1 { font-size: 46px; }
+      .hero-copy { font-size: 16px; }
+      .signal { margin-top: 48px; }
+      .signal-item { padding: 18px 6px; }
+      .signal-title { font-size: 19px; }
+      .signal-label { font-size: 8px; letter-spacing: .06em; }
+      section { padding: 52px 0; }
+      h2 { font-size: 36px; }
+      .grid, .approach { grid-template-columns: 1fr; }
+      .approach { gap: 24px; }
+      .card { min-height: 0; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top" aria-label="Alaa Zewail, home">Alaa Zewail<span>.</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a class="nav-cta" href="#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <section class="hero" style="border: 0">
+        <span class="mono eyebrow">Media buying · Performance marketing</span>
+        <h1>Make every<br>marketing dollar <em>work harder.</em></h1>
+        <p class="hero-copy">I build thoughtful paid media strategies that connect sharp creative with clear measurement, helping brands turn attention into sustainable growth.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#services">Explore services <span aria-hidden="true">&nbsp;↘</span></a>
+          <a class="button" href="#contact">Start a conversation</a>
+        </div>
+
+        <div class="platforms" aria-label="Advertising platforms">
+          <div class="platform-track" aria-hidden="true">
+            <div class="platform-group"><span class="platform">Meta Ads</span><span class="platform">TikTok Ads</span><span class="platform">Google Ads</span><span class="platform">Snapchat Ads</span><span class="platform">Campaign Strategy</span></div>
+            <div class="platform-group"><span class="platform">Meta Ads</span><span class="platform">TikTok Ads</span><span class="platform">Google Ads</span><span class="platform">Snapchat Ads</span><span class="platform">Campaign Strategy</span></div>
+          </div>
+        </div>
+
+        <div class="signal" aria-label="Core areas of work">
+          <div class="signal-item"><span class="signal-title">Strategy</span><span class="signal-label">Built around your goals</span></div>
+          <div class="signal-item"><span class="signal-title">Testing</span><span class="signal-label">Learn and improve</span></div>
+          <div class="signal-item"><span class="signal-title">Measurement</span><span class="signal-label">Decisions grounded in data</span></div>
+        </div>
+      </section>
+
+      <section id="services">
+        <span class="mono section-label">What I do</span>
+        <h2>Paid media, with<br><em>purpose.</em></h2>
+        <p class="section-intro">From the first campaign brief to ongoing optimization, each part of the work should move the same business goal forward.</p>
+        <div class="grid">
+          <article class="card">
+            <span class="card-index">01 / STRATEGY</span>
+            <h3>Media planning</h3>
+            <p>Channel selection, audience planning, and budget allocation shaped around your offer, market, and growth stage.</p>
+          </article>
+          <article class="card">
+            <span class="card-index">02 / EXECUTION</span>
+            <h3>Campaign management</h3>
+            <p>Careful campaign setup and active optimization across the platforms that make sense for your audience.</p>
+          </article>
+          <article class="card">
+            <span class="card-index">03 / LEARNING</span>
+            <h3>Creative testing</h3>
+            <p>A structured testing process to understand which messages, formats, and concepts earn attention and action.</p>
+          </article>
+          <article class="card">
+            <span class="card-index">04 / CLARITY</span>
+            <h3>Tracking &amp; reporting</h3>
+            <p>Reliable measurement and straightforward reporting that make performance easier to understand and act on.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="approach" class="approach">
+        <div>
+          <span class="mono section-label">How I work</span>
+          <h2>Clear thinking.<br><em>Continuous learning.</em></h2>
+          <p class="section-intro">Good performance is a process, not a trick. I bring structure to the work and stay curious about what the data is telling us.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><div><h3>Understand</h3><p>Get aligned on the business, customer, offer, and what success means.</p></div></article>
+          <article class="step"><span class="step-number">02</span><div><h3>Build</h3><p>Turn the strategy into a focused campaign and measurement plan.</p></div></article>
+          <article class="step"><span class="step-number">03</span><div><h3>Learn</h3><p>Review results, test deliberately, and use each insight to guide the next move.</p></div></article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <span class="mono section-label">Have a growth goal in mind?</span>
+        <h2>Let's make the next move <em>count.</em></h2>
+        <p>Tell me what you're working toward and where paid media fits into the picture.</p>
+        <a class="button primary" href="mailto:alaazewail9@gmail.com?subject=Paid%20media%20inquiry">Get in touch <span aria-hidden="true">&nbsp;↗</span></a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Alaa Zewail</span>
+      <span>Media Buyer &amp; Performance Marketer</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
